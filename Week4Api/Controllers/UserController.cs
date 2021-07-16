@@ -7,7 +7,7 @@ namespace Week4Api.Controllers
         [HttpGet("api/users")]
         public string[] GetUsers()
         {
-            return new string[] { "Umar", "Burhan" };
+            return new string[] { "Umar", "Burhan", "John" };
         }
     }
 }
