@@ -1,13 +1,18 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using System.Collections.Generic;
+using System.Linq;
+using Week4Api.Database;
 
 namespace Week4Api.Controllers
 {
     public class UserController : ControllerBase
     {
         [HttpGet("api/users")]
-        public string[] GetUsers()
+        public List<User> GetUsers()
         {
-            return new string[] { "Umar", "Burhan", "John" };
+            var db = new Week4Context();
+
+            return db.Users.ToList();
         }
     }
 }
